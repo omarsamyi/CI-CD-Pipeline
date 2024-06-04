@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    tools {
+        docker 'latest'
+        jdk '17.0.11'
+    }
     environment {
         DOCKER_IMAGE = "omarsamy/ci-cd-pipeline:${env.BUILD_NUMBER}"
         GIT_REPO = "https://github.com/omarsamyi/CI-CD-Pipeline.git"
