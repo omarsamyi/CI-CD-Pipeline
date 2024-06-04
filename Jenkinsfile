@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    tools {
-        dockerTool 'docker'
-    }
+
 
     environment {
         DOCKER_IMAGE = "omarsamy/ci-cd-pipeline:${env.BUILD_NUMBER}"
